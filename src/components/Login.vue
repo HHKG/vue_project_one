@@ -84,6 +84,9 @@
 </script>
 
 <style scoped="scoped">
+  h3{
+    text-align: center;
+  }
   .body {
     background: #2C3E50;
     position: fixed;

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-  import {mapState,mapActions} from 'Vuex';
+  import {mapState,mapActions} from 'vuex';
   export default {
     name: 'HelloWorld',
     data() {
