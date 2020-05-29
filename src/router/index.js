@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Blog from '@/components/Blog'
-import Login from '@/components/Login'
-import HomePage from '../pages/HomePage'
+
+const HomePage=()=>import('../pages/HomePage');
+const Login=()=>import('@/components/Login');
+const Blog=()=>import('@/components/Blog');
+const Home=()=>import('@/pages/home');
+const UserList=()=>import('@/pages/userList');
 
 Vue.use(Router)
 
@@ -27,7 +30,16 @@ export default new Router({
     {
       path:'/HomePage',
       name:'HomePage',
-      component:HomePage
+      component:HomePage,
+      children:[{
+        path:'',
+        component:Home, 
+        meta:[]
+      },{
+        path:'/UserList',
+        component:UserList,
+        meta:['数据管理','用户列表']
+      }]
     }
   ]
 })

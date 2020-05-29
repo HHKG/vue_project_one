@@ -57,6 +57,10 @@ module.exports = {
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
       },
+	   {
+	          test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+	          loader: 'file-loader'
+	        },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
