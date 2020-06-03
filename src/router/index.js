@@ -33,7 +33,7 @@ export default new Router({
       component:HomePage,
       children:[{
         path:'',
-        component:Home, 
+        component:Home,
         meta:[]
       },{
         path:'/UserList',

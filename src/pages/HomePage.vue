@@ -6,7 +6,7 @@
           <el-menu-item index="HomePage"><i class="el-icon-menu"></i>首页</el-menu-item>
           <el-submenu index="2">
             <template slot="title"><i class="el-icon-document"></i>数据管理</template>
-            <el-menu-item index="UserList">用户列表</el-menu-item>
+            <el-menu-item index="UserList" icon="el-icon-edit">用户列表</el-menu-item>
             <el-menu-item index="shopList">商家列表</el-menu-item>
             <el-menu-item index="foodList">食品列表</el-menu-item>
             <el-menu-item index="orderList">订单列表</el-menu-item>
@@ -40,9 +40,12 @@
       </el-col>
       <el-col :span="20" style="height: 100%;overflow: auto;">
         <keep-alive>
-          <HeadTop></HeadTop>
+          <!-- -->
           <!-- vue提供组件keep-alive组件是为了做当前页面的缓存，在离开该页面去到别的页面的时候，再回来的时候，回到上次离开页面时的一个状态 -->
-          <router-view></router-view>
+          <div>
+            <HeadTop></HeadTop>
+            <router-view></router-view>
+          </div>
         </keep-alive>
       </el-col>
     </el-row>
@@ -52,18 +55,18 @@
 <script>
   import HeadTop from '../components/heardTop';
   export default {
-    components:{
-      'HeadTop':HeadTop
+    components: {
+      'HeadTop': HeadTop
     },
     data() {
-        return{
+      return {
 
-        }
+      }
     },
     computed: {
-    	defaultActive: function(){
-    		return this.$route.path.replace('/', '');
-    	}
+      defaultActive: function() {
+        return this.$route.path.replace('/', '');
+      }
     },
   }
 </script>
@@ -73,5 +76,4 @@
   .manage_page{
 
   } */
-
 </style>

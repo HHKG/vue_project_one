@@ -1,11 +1,11 @@
 <template>
   <div class="header-container">
     <el-breadcrumb separator="/" class="l-h">
-      <el-breadcrumb-item :to="{ path: '/HomePage' }">头部</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/HomePage' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item v-for="(item,index) in this.$route.meta" :key="index">{{item}}</el-breadcrumb-item>
     </el-breadcrumb>
-   <el-dropdown @command="handleCommand" menu-align='start' class="f-r logo-position">
-    	<img src="../assets/logo.png" class="avator" width="49px" height="49px">
+   <el-dropdown menu-align='start' class="f-r logo-position">
+    	<img src="../assets/images/logo.jpeg" class="avator" width="49px" height="49px">
     	<el-dropdown-menu slot="dropdown">
     		<el-dropdown-item command="home">首页</el-dropdown-item>
     		<el-dropdown-item command="signout">退出</el-dropdown-item>
@@ -33,10 +33,13 @@
 
 <style scoped="scoped">
   .header-container{
-    height: 70px;
+    height: 56px;
     background: #EFF2F7;
     position: relative;
     padding:0px 10px;
+  }
+  img{
+    border-radius:50px ;
   }
   .header-container::after{
     display: block;
@@ -55,6 +58,6 @@
     float: right;
   }
   .l-h{
-    line-height: 70px;
+    line-height: 56px;
   }
 </style>
