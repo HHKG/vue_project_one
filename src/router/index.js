@@ -12,6 +12,11 @@ const foodList=()=>import('@/pages/foodList');
 const orderList=()=>import('@/pages/orderList');
 const adminList=()=>import('@/pages/adminList');
 const addShop=()=>import('@/pages/addShop');
+const addGoods=()=>import('@/pages/addGoods');
+const visitor=()=>import('@/pages/visitor');
+const vueEdit=()=>import('@/pages/vueEdit');
+const adminSet=()=>import('@/pages/adminSet');
+const explain=()=>import('@/pages/explain');
 
 Vue.use(Router)
 
@@ -69,7 +74,31 @@ export default new Router({
         component:addShop,
         meta:['添加数据','添加店铺']
       },
-
+      {
+        path:'/addGoods',
+        component:addGoods,
+        meta:['添加数据','添加商品']
+      },
+      {
+        path:'/visitor',
+        component:visitor,
+        meta:['图表','用户分布']
+      },
+      {
+        path:'/vueEdit',
+        component:vueEdit,
+        meta:['编辑','文本编辑']
+      },
+      {
+        path:'/adminSet',
+        component:adminSet,
+        meta:['设置','管理员设置']
+      },
+      {
+        path:'/explain',
+        component:explain,
+        meta:['说明','说明']
+      }
       ]
     }
   ]
